@@ -73,8 +73,8 @@ DOCKER_LIBS_EXTRA_TAGS := $(LIBS_VERSION)$(DOCKER_IMAGE_TAG_SUFFIX) $(LIBS_REVIS
 # set default Base images
 DOCKER_BASE_IMAGE_SKIP_PULL := $(or ${DOCKER_BASE_IMAGE_SKIP_PULL},true)
 DOCKER_UBUNTU_IMAGE := $(or ${DOCKER_UBUNTU_IMAGE},ubuntu:18.04)
-DOCKER_NVIDIA_DEVELOP_IMAGE := $(or ${DOCKER_NVIDIA_DEVELOP_IMAGE},nvidia/cuda:10.1-devel-ubuntu18.04)
-DOCKER_NVIDIA_RUNTIME_IMAGE := $(or ${DOCKER_NVIDIA_RUNTIME_IMAGE},nvidia/cuda:10.1-runtime-ubuntu18.04)
+DOCKER_NVIDIA_DEVELOP_IMAGE := $(or ${DOCKER_NVIDIA_DEVELOP_IMAGE},nvidia/cuda:9.2-devel-ubuntu18.04)
+DOCKER_NVIDIA_RUNTIME_IMAGE := $(or ${DOCKER_NVIDIA_RUNTIME_IMAGE},nvidia/cuda:9.2-runtime-ubuntu18.04)
 
 # extract name and tag of nvidia images
 DOCKER_UBUNTU_IMAGE_NAME := $(shell echo ${DOCKER_UBUNTU_IMAGE} | sed -e 's+:.*++')
