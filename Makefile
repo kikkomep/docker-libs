@@ -776,7 +776,7 @@ test_ecvl_toolkit: ecvl_folder ## Test 'ecvl-toolkit' image
 
 test_pyeddl: pyeddl_folder ## Test 'pyeddl' image
 	$(call set_library_revision,pylibs,pyeddl)
-	@$(call test_image,\
+	$(call test_image,\
 		pyeddl:${PYEDDL_IMAGE_VERSION_TAG},\
 		$(shell python3 tests/inventory.py ${PYEDDL_LIB_PATH} tests/pyeddl),\
 		pyeddl-toolkit:${PYEDDL_IMAGE_VERSION_TAG}=/usr/local/src/pyeddl\
@@ -784,7 +784,7 @@ test_pyeddl: pyeddl_folder ## Test 'pyeddl' image
 
 test_pyeddl_toolkit: pyeddl_folder ## Test 'pyeddl-toolkit' images
 	$(call set_library_revision,pylibs,pyeddl)
-	@$(call test_image,pyeddl-toolkit:${PYEDDL_IMAGE_VERSION_TAG},\
+	$(call test_image,pyeddl-toolkit:${PYEDDL_IMAGE_VERSION_TAG},\
 		$(shell python3 tests/inventory.py ${PYEDDL_LIB_PATH} tests/pyeddl))
 
 test_pyecvl: pyecvl_folder ## Test 'pyecvl' image
